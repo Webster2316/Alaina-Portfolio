@@ -1,0 +1,161 @@
+/* === Global Styles === */
+body {
+  scroll-behavior: smooth;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #f8e5f9;
+  color: #4a0f7a;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s;
+  color: #a349a4;
+}
+
+/* === Navbar Dark Mode (default) === */
+.navbar {
+  transition: background-color 0.3s;
+  background-color: #ffffff !important; /* White background */
+}
+.navbar .nav-link {
+  color: #6a0dad !important; /* Purple text */
+}
+.navbar .nav-link:hover {
+  color: #d46bff !important; /* Lighter purple/pink hover */
+}
+.navbar .navbar-brand {
+  color: #6a0dad !important; /* Purple brand */
+}
+
+
+
+/* === Hero Section === */
+#home {
+  background: linear-gradient(rgba(138, 43, 226, 0.6), rgba(199, 21, 133, 0.6)), url('https://via.placeholder.com/1200x800') center/cover no-repeat;
+  color: #fff;
+}
+#home h1 {
+  animation: fadeIn 1.5s ease forwards;
+  color: #ffb3ff;
+}
+
+#home .txt {
+    color: #ffb3ff;
+}
+#home p {
+  animation: fadeIn 2s ease forwards;
+  color: #ffe6ff;
+}
+#home .btn {
+  transition: transform 0.3s;
+}
+#home .btn:hover {
+  transform: scale(1.1);
+}
+
+/* === About Section === */
+#about {
+  background-color: #fbe4f9;
+  color: #4a0f7a;
+}
+#about ul.list-group {
+  border: none;
+  background-color: #f5c1f0;
+  border-radius: 0.5rem;
+}
+#about ul.list-group li {
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s;
+}
+#about ul.list-group li:hover {
+  transform: scale(1.05);
+  background-color: #d46bff;
+  color: #fff;
+}
+
+/* === Projects Section === */
+#projects {
+  background-color: #f4d6f7;
+}
+#projects .card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+}
+#projects .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(199, 21, 133, 0.4);
+}
+#projects .btn-outline-dark {
+  border-color: #a349a4;
+  color: #a349a4;
+}
+#projects .btn-outline-dark:hover {
+  background-color: #a349a4;
+  color: #fff;
+}
+
+/* === Contact Form === */
+#contact {
+  background-color: #fce4fa;
+  color: #4a0f7a;
+}
+#contact input, #contact textarea {
+  border-radius: 0.5rem;
+  border: 1px solid #d46bff;
+  transition: box-shadow 0.3s, transform 0.3s;
+  background-color: #fff0f7;
+}
+#contact input:focus, #contact textarea:focus {
+  box-shadow: 0 0 10px rgba(214, 107, 255, 0.7);
+  transform: scale(1.02);
+}
+
+/* === Footer === */
+footer {
+  background-color: #6a0dad;
+  color: #fff;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* === Dark/Light Toggle === */
+/* === Navbar Light Mode === */
+body.light-mode .navbar, body.light-mode .btn {
+  background-color: #271534 !important; /* Purple background */
+}
+body.light-mode .navbar .nav-link,
+body.light-mode .navbar .navbar-brand {
+  color: #ffd7fa !important; /* White text */
+}
+body.light-mode .navbar .nav-link:hover {
+  color: #ffb3ff !important; /* Pinkish hover */
+}
+
+body.light-mode {
+  background-color: #f7d6ff;
+  color: #4a0f7a;
+}
+body.light-mode a {
+  color: #d46bff;
+}
+body.light-mode #home {
+  color: #4a0f7a;
+  background: linear-gradient(rgba(255, 192, 203, 0.6), rgba(216, 112, 255, 0.6)), url('https://via.placeholder.com/1200x800') center/cover no-repeat;
+}
+
+/* Fade & slide up animation for sections */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
